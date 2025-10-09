@@ -1,0 +1,20 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#gradient3)"/>
+  <!-- Sun -->
+  <circle cx="320" cy="80" r="30" fill="white" fill-opacity="0.8"/>
+  <!-- Clouds -->
+  <ellipse cx="120" cy="100" rx="40" ry="20" fill="white" fill-opacity="0.6"/>
+  <ellipse cx="100" cy="95" rx="25" ry="15" fill="white" fill-opacity="0.6"/>
+  <ellipse cx="140" cy="95" rx="25" ry="15" fill="white" fill-opacity="0.6"/>
+  <!-- Weather Info -->
+  <rect x="150" y="180" width="100" height="60" rx="10" fill="white" fill-opacity="0.2"/>
+  <text x="200" y="205" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">25°C</text>
+  <text x="200" y="225" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Soleado</text>
+  <text x="200" y="260" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">WEATHER APP</text>
+</svg>
