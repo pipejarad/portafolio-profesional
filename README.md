@@ -26,13 +26,16 @@ Ingeniero en Computación e Informática y Músico Profesional con mención en C
 ## 💼 Skills Destacados
 
 ### Frontend
+
 - React, Next.js, TypeScript, Tailwind CSS
 - HTML5/CSS3, JavaScript, Vue.js
 
 ### Backend
+
 - Node.js, Python, Express.js, RESTful APIs
 
 ### Music Production
+
 - Ableton Live, Logic Pro, Pro Tools
 - Mixing & Mastering, Composición, Sound Design
 
@@ -94,11 +97,10 @@ npm run start
 
 **Felipe Jara**  
 📧 jarad.felipe@gmail.com  
-📱 +56 9 3265845  
-📍 Santiago, Chile
+ Santiago, Chile
 
 ---
 
 ⭐ **Buscando oportunidades en el área IT** - ¡Contacta conmigo para colaborar!
 
-*Portfolio desarrollado con Next.js 14, TypeScript y Tailwind CSS*
+_Portfolio desarrollado con Next.js 14, TypeScript y Tailwind CSS_

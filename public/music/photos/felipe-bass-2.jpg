@@ -1,0 +1,16 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="url(#gradient2)"/>
+  <rect x="80" y="100" width="240" height="200" rx="15" fill="white" opacity="0.9"/>
+  <circle cx="150" cy="170" r="20" fill="#ef4444"/>
+  <circle cx="200" cy="170" r="15" fill="#f59e0b"/>
+  <circle cx="250" cy="170" r="18" fill="#10b981"/>
+  <rect x="100" y="220" width="200" height="40" rx="20" fill="#6366f1"/>
+  <text x="200" y="245" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="bold">RECORD</text>
+  <text x="200" y="350" text-anchor="middle" fill="white" font-family="system-ui" font-size="20" font-weight="bold">🎙️ Estudio con Fonko Rocks</text>
+  <defs>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+  </defs>
+</svg>

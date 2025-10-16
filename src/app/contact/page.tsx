@@ -2,15 +2,7 @@ import { Metadata } from "next";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Card, CardContent } from "@/components/ui/Card";
 import { contactInfo } from "@/data/portfolio";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Github,
-  Music,
-  Calendar,
-} from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Music, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contacto | Portafolio",
@@ -76,23 +68,6 @@ export default function ContactPage() {
                           </a>
                         </div>
                       </div>
-
-                      {contactInfo.phone && (
-                        <div className="flex items-center gap-3">
-                          <Phone className="w-5 h-5 text-green-600" />
-                          <div>
-                            <p className="font-medium text-gray-900">
-                              Teléfono
-                            </p>
-                            <a
-                              href={`tel:${contactInfo.phone}`}
-                              className="text-green-600 hover:text-green-700"
-                            >
-                              {contactInfo.phone}
-                            </a>
-                          </div>
-                        </div>
-                      )}
 
                       <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5 text-purple-600" />

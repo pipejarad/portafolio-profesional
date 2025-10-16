@@ -10,18 +10,20 @@ export interface Project {
   featured: boolean;
 }
 
-export interface MusicProject {
-  id: string;
+export interface MusicStory {
   title: string;
-  artist: string;
-  description: string;
-  genre: string[];
-  releaseDate: string;
-  imageUrl?: string;
-  spotifyUrl?: string;
-  youtubeUrl?: string;
-  soundcloudUrl?: string;
-  featured: boolean;
+  heroImage: string;
+  story: string[];
+  spotifyPlaylist: string;
+  photos: Photo[];
+  philosophy: string;
+}
+
+export interface Photo {
+  id: string;
+  url: string;
+  alt: string;
+  caption?: string;
 }
 
 export interface Experience {

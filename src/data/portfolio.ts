@@ -1,4 +1,4 @@
-import { PersonalInfo, ContactInfo, Skill, Experience, Project, MusicProject } from '@/lib/types';
+import { PersonalInfo, ContactInfo, Skill, Experience, Project, MusicStory } from '@/lib/types';
 
 export const personalInfo: PersonalInfo = {
   name: "Felipe Jara",
@@ -10,7 +10,6 @@ export const personalInfo: PersonalInfo = {
 
 export const contactInfo: ContactInfo = {
   email: "jarad.felipe@gmail.com",
-  phone: "+56 9 3265845",
   location: "Santiago, Chile",
   linkedin: "https://linkedin.com/in/felipe-jara-6582a3100/",
   github: "https://github.com/pipejarad",
@@ -123,40 +122,40 @@ export const projects: Project[] = [
   }
 ];
 
-export const musicProjects: MusicProject[] = [
-  {
-    id: "1",
-    title: "Midnight Dreams",
-    artist: "Tu Nombre Artístico",
-    description: "EP de música electrónica ambient con influencias de synthwave y música cinematográfica.",
-    genre: ["Electronic", "Ambient", "Synthwave"],
-    releaseDate: "2023-12",
-    imageUrl: "/music/midnight-dreams.svg",
-    spotifyUrl: "https://open.spotify.com/album/ejemplo",
-    youtubeUrl: "https://youtube.com/watch?v=ejemplo",
-    featured: true
-  },
-  {
-    id: "2",
-    title: "Code Symphony",
-    artist: "Tu Nombre Artístico",
-    description: "Álbum conceptual que combina sonidos de programación con melodías orgánicas.",
-    genre: ["Experimental", "Electronic", "Ambient"],
-    releaseDate: "2023-08",
-    imageUrl: "/music/code-symphony.svg",
-    spotifyUrl: "https://open.spotify.com/album/ejemplo2",
-    soundcloudUrl: "https://soundcloud.com/usuario/code-symphony",
-    featured: true
-  },
-  {
-    id: "3",
-    title: "Digital Folklore",
-    artist: "Colaboración",
-    description: "Proyecto colaborativo fusionando música tradicional con elementos electrónicos modernos.",
-    genre: ["Folk", "Electronic", "World Music"],
-    releaseDate: "2023-05",
-    imageUrl: "/music/digital-folklore.svg",
-    youtubeUrl: "https://youtube.com/watch?v=ejemplo3",
-    featured: false
-  }
-];
+export const musicStory: MusicStory = {
+  title: "Mi Lado Musical",
+  heroImage: "/music/hero-bass.jpg",
+  story: [
+    "Comencé a tocar bajo eléctrico a los 15 años, y desde entonces he desarrollado una carrera profesional que me ha permitido trabajar con distintos artistas y proyectos en vivo y de estudio. A lo largo del tiempo, he participado en estilos muy diversos —rock, funk, jazz, soul, blues, reggae, gospel, reggaetón, cumbia, salsa, merengue, entre otros— lo que me ha dado una visión amplia y flexible del trabajo musical.",
+    "He colaborado como bajista y director musical con artistas como Luis Pedraza, Vesta Lugg, Daniela Castillo, Byron Fire, Simoney y Diego Ponce, entre otros. Actualmente trabajo con la productora Fonko Rocks, una de las house bands de Hard Rock Café Santiago, y participo en presentaciones y eventos para empresas y particulares.",
+    "Además, ejerzo como profesor en School of Rock Vitacura, donde imparto clases de bajo eléctrico (nivel medio y avanzado), así como piano y guitarra básica. La música me ha enseñado a trabajar en equipo, adaptarme a contextos cambiantes y mantener la calma frente a escenarios exigentes. Son habilidades que también aplico en mi desarrollo profesional dentro del área tecnológica."
+  ],
+  spotifyPlaylist: "https://open.spotify.com/playlist/0yuZpwdIGC50LnUwXF5UpE?si=dd1d85bba7f241a0",
+  photos: [
+    {
+      id: "1",
+      url: "/music/photos/felipe-bass-1.jpg",
+      alt: "Felipe tocando bajo en presentación en vivo",
+      caption: "Presentación en Hard Rock Café Santiago"
+    },
+    {
+      id: "2", 
+      url: "/music/photos/felipe-bass-2.jpg",
+      alt: "Felipe en estudio de grabación",
+      caption: "Sesión de grabación con Fonko Rocks"
+    },
+    {
+      id: "3",
+      url: "/music/photos/felipe-bass-3.jpg", 
+      alt: "Felipe enseñando en School of Rock",
+      caption: "Clase de bajo en School of Rock Vitacura"
+    },
+    {
+      id: "4",
+      url: "/music/photos/felipe-bass-4.jpg",
+      alt: "Felipe con su bajo en concierto",
+      caption: "Concierto con artistas locales"
+    }
+  ],
+  philosophy: "Mi experiencia musical me ayudó a entender que las habilidades se construyen con tiempo, práctica y constancia. No partí con un talento natural, pero con disciplina y método logré profesionalizarme en un área que inicialmente me resultaba ajena. Esa misma lógica es la que aplico hoy en el desarrollo de software: aprender a fondo, mejorar cada día y mantener la atención en los detalles que hacen que un trabajo esté bien hecho."
+};
