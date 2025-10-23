@@ -40,7 +40,7 @@ export interface Experience {
 export interface Skill {
   name: string;
   level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
-  category: 'Frontend' | 'Backend' | 'Database' | 'Tools' | 'Music';
+  category: 'Frontend' | 'Backend' | 'Database' | 'Tools' | 'Instrumentos' | 'Music';
 }
 
 export interface ContactInfo {

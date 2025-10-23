@@ -76,7 +76,7 @@ export default function AboutPage() {
 
                 <div className="flex flex-wrap gap-3">
                   <Badge variant="primary">Desarrollador Full Stack</Badge>
-                  <Badge variant="secondary">Productor Musical</Badge>
+                  <Badge variant="secondary">Bajista de sesión</Badge>
                   <Badge variant="success">Freelancer</Badge>
                 </div>
               </div>
@@ -185,8 +185,10 @@ export default function AboutPage() {
                   Pasión por la Excelencia
                 </h3>
                 <p className="text-gray-600">
-                  Cada línea de código y cada nota musical reflejan mi
-                  compromiso con la calidad y la atención al detalle.
+                  Tanto en el desarrollo como en la música, la atención al
+                  detalle marca la diferencia. Me esfuerzo por mantener altos
+                  estándares de calidad y precisión en cada proyecto en el que
+                  participo.
                 </p>
               </div>
 
@@ -198,8 +200,10 @@ export default function AboutPage() {
                   Aprendizaje Continuo
                 </h3>
                 <p className="text-gray-600">
-                  La tecnología y la música evolucionan constantemente. Me
-                  mantengo actualizado para ofrecer soluciones innovadoras.
+                  La tecnología y los entornos creativos evolucionan
+                  constantemente. Me mantengo en formación permanente para
+                  incorporar nuevas herramientas y metodologías que mejoren mi
+                  desempeño profesional.
                 </p>
               </div>
 
@@ -211,8 +215,10 @@ export default function AboutPage() {
                   Colaboración Efectiva
                 </h3>
                 <p className="text-gray-600">
-                  Creo en el poder del trabajo en equipo y la comunicación clara
-                  para alcanzar objetivos ambiciosos.
+                  El trabajo en equipo y la comunicación clara son fundamentales
+                  para lograr resultados consistentes. Valoro los espacios donde
+                  la cooperación y el respeto profesional impulsan el
+                  crecimiento colectivo.
                 </p>
               </div>
             </div>

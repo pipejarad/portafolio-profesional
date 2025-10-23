@@ -21,10 +21,12 @@ export const skills: Skill[] = [
   // Frontend
   { name: "JavaScript", level: "Intermediate", category: "Frontend" },
   { name: "HTML5/CSS3", level: "Intermediate", category: "Frontend" },
+  { name: "Ruby", level: "Beginner", category: "Frontend" },
   { name: "React", level: "Intermediate", category: "Frontend" },
   { name: "TypeScript", level: "Beginner", category: "Frontend" },
   { name: "Next.js", level: "Beginner", category: "Frontend" },
   { name: "Tailwind CSS", level: "Intermediate", category: "Frontend" },
+
   
   // Backend
   { name: "Python", level: "Intermediate", category: "Backend" },
@@ -35,20 +37,23 @@ export const skills: Skill[] = [
   // Database
   { name: "SQL", level: "Intermediate", category: "Database" },
   { name: "PostgreSQL", level: "Beginner", category: "Database" },
-  { name: "Base de Datos", level: "Advanced", category: "Database" },
   
   // Tools
   { name: "Git", level: "Advanced", category: "Tools" },
   { name: "VS Code", level: "Expert", category: "Tools" },
   { name: "Linux/Terminal", level: "Beginner", category: "Tools" },
   
+  // Instrumentos
+  { name: "Bajo Eléctrico", level: "Expert", category: "Instrumentos" },
+  { name: "Guitarra", level: "Advanced", category: "Instrumentos" },
+  { name: "Piano", level: "Intermediate", category: "Instrumentos" },
+  { name: "Batería", level: "Beginner", category: "Instrumentos" },
+  
   // Music
-  { name: "Ableton Live", level: "Advanced", category: "Music" },
-  { name: "Logic Pro", level: "Intermediate", category: "Music" },
-  { name: "Mixing & Mastering", level: "Advanced", category: "Music" },
-  { name: "Composición", level: "Expert", category: "Music" },
+  { name: "Cubase", level: "Advanced", category: "Music" },
   { name: "Pro Tools", level: "Intermediate", category: "Music" },
-  { name: "Sound Design", level: "Advanced", category: "Music" }
+  { name: "Mixing & Mastering", level: "Intermediate", category: "Music" },
+  { name: "Composición", level: "Advanced", category: "Music" },
 ];
 
 // Agregar función helper para obtener nivel numérico
@@ -68,8 +73,8 @@ export const experience: Experience[] = [
     company: "Universidad Andrés Bello",
     position: "Ingeniero en Computación e Informática",
     startDate: "2023-03",
-    endDate: "2024-12",
-    description: "Carrera completada con enfoque en desarrollo de aplicaciones web y bases de datos. Proyecto de título: 'Meet & Gig', comunidad digital para músicos independientes. Especialización en desarrollo web y gestión de bases de datos.",
+    endDate: "2025-09",
+    description: "Carrera terminada con enfoque en desarrollo de aplicaciones web y bases de datos. Proyecto de título: 'Meet & Gig', comunidad digital para músicos independientes. Especialización en desarrollo web y gestión de bases de datos.",
     technologies: ["JavaScript", "Python", "SQL", "HTML/CSS", "React", "PostgreSQL"],
     current: false
   },
