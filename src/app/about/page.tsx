@@ -66,7 +66,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center text-gray-600">
                     <MapPin className="h-5 w-5 mr-2 text-blue-600" />
-                    <span>Madrid, España</span>
+                    <span>Santiago, Chile</span>
                   </div>
                   <div className="flex items-center text-gray-600">
                     <Briefcase className="h-5 w-5 mr-2 text-blue-600" />

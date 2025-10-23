@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Photo } from '@/lib/types';
+import Image from "next/image";
+import { Photo } from "@/lib/types";
 
 interface PhotoGalleryProps {
   photos: Photo[];
@@ -11,7 +11,10 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {photos.map((photo) => (
-        <div key={photo.id} className="group relative overflow-hidden rounded-lg shadow-lg">
+        <div
+          key={photo.id}
+          className="group relative overflow-hidden rounded-lg shadow-lg"
+        >
           <div className="aspect-square relative">
             <Image
               src={photo.url}

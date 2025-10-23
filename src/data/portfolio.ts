@@ -3,7 +3,7 @@ import { PersonalInfo, ContactInfo, Skill, Experience, Project, MusicStory } fro
 export const personalInfo: PersonalInfo = {
   name: "Felipe Jara",
   title: "Ingeniero en Computación e Informática / Músico y Sonidista mención en Composición e Interpretación musical.",
-  bio: "Ingeniero en Computación e Informática y Músico Profesional buscando oportunidades en el sector IT donde pueda aplicar mi creatividad técnica y artística.",
+  bio: "Ingeniero en Computación e Informática con pasión por el desarrollo de software y la música. Busco combinar mi formación técnica con mi experiencia musical para crear soluciones innovadoras en el sector IT. Mi objetivo es integrarme a un equipo donde pueda aportar tanto mis habilidades de programación como mi capacidad creativa y de trabajo en equipo desarrollada a través de la música.",
   avatarUrl: "/images/profile.svg",
   resumeUrl: "/cv.pdf"
 };

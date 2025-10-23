@@ -1,4 +1,4 @@
-import { ExternalLink, Music } from 'lucide-react';
+import { ExternalLink, Music } from "lucide-react";
 
 interface SpotifyPlaylistProps {
   playlistUrl: string;
