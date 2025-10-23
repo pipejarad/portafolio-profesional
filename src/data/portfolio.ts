@@ -3,7 +3,7 @@ import { PersonalInfo, ContactInfo, Skill, Experience, Project, MusicStory } fro
 export const personalInfo: PersonalInfo = {
   name: "Felipe Jara",
   title: "Ingeniero en Computación e Informática / Músico y Sonidista mención en Composición e Interpretación musical.",
-  bio: "Ingeniero en Computación e Informática con pasión por el desarrollo de software y la música. Busco combinar mi formación técnica con mi experiencia musical para crear soluciones innovadoras en el sector IT. Mi objetivo es integrarme a un equipo donde pueda aportar tanto mis habilidades de programación como mi capacidad creativa y de trabajo en equipo desarrollada a través de la música.",
+  bio: "Ingeniero en Computación e Informática con interés en el desarrollo de software y experiencia en el ámbito musical. Busco integrar mis conocimientos técnicos en un entorno colaborativo que promueva el aprendizaje continuo y la calidad en los procesos de desarrollo. Mi objetivo es aportar soluciones funcionales y bien estructuradas dentro de equipos orientados a la mejora constante.",
   avatarUrl: "/images/profile.svg",
   resumeUrl: "/cv.pdf"
 };
@@ -19,34 +19,28 @@ export const contactInfo: ContactInfo = {
 
 export const skills: Skill[] = [
   // Frontend
-  { name: "React", level: "Advanced", category: "Frontend" },
-  { name: "Next.js", level: "Advanced", category: "Frontend" },
-  { name: "TypeScript", level: "Advanced", category: "Frontend" },
-  { name: "Tailwind CSS", level: "Advanced", category: "Frontend" },
-  { name: "HTML5/CSS3", level: "Expert", category: "Frontend" },
-  { name: "JavaScript", level: "Expert", category: "Frontend" },
-  { name: "Vue.js", level: "Intermediate", category: "Frontend" },
+  { name: "JavaScript", level: "Intermediate", category: "Frontend" },
+  { name: "HTML5/CSS3", level: "Intermediate", category: "Frontend" },
+  { name: "React", level: "Intermediate", category: "Frontend" },
+  { name: "TypeScript", level: "Beginner", category: "Frontend" },
+  { name: "Next.js", level: "Beginner", category: "Frontend" },
+  { name: "Tailwind CSS", level: "Intermediate", category: "Frontend" },
   
   // Backend
-  { name: "Node.js", level: "Intermediate", category: "Backend" },
   { name: "Python", level: "Intermediate", category: "Backend" },
-  { name: "Express.js", level: "Intermediate", category: "Backend" },
-  { name: "RESTful APIs", level: "Advanced", category: "Backend" },
-  { name: "GraphQL", level: "Beginner", category: "Backend" },
+  { name: "Java", level: "Beginner", category: "Backend" },
+  { name: "Node.js", level: "Beginner", category: "Backend" },
+  { name: "RESTful APIs", level: "Intermediate", category: "Backend" },
   
   // Database
-  { name: "MongoDB", level: "Intermediate", category: "Database" },
-  { name: "PostgreSQL", level: "Intermediate", category: "Database" },
-  { name: "Firebase", level: "Intermediate", category: "Database" },
-  { name: "MySQL", level: "Intermediate", category: "Database" },
+  { name: "SQL", level: "Intermediate", category: "Database" },
+  { name: "PostgreSQL", level: "Beginner", category: "Database" },
+  { name: "Base de Datos", level: "Advanced", category: "Database" },
   
   // Tools
   { name: "Git", level: "Advanced", category: "Tools" },
   { name: "VS Code", level: "Expert", category: "Tools" },
-  { name: "Figma", level: "Intermediate", category: "Tools" },
-  { name: "Docker", level: "Beginner", category: "Tools" },
-  { name: "Vercel", level: "Advanced", category: "Tools" },
-  { name: "AWS", level: "Beginner", category: "Tools" },
+  { name: "Linux/Terminal", level: "Beginner", category: "Tools" },
   
   // Music
   { name: "Ableton Live", level: "Advanced", category: "Music" },
@@ -71,53 +65,61 @@ export const getSkillLevel = (level: string): number => {
 export const experience: Experience[] = [
   {
     id: "1",
-    company: "Empresa Actual",
-    position: "Desarrollador Frontend",
-    startDate: "2023-01",
-    description: "Desarrollo de aplicaciones web modernas usando React y Next.js. Colaboración en equipo ágil y mejora continua de la experiencia del usuario.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    current: true
+    company: "Universidad Andrés Bello",
+    position: "Ingeniero en Computación e Informática",
+    startDate: "2023-03",
+    endDate: "2024-12",
+    description: "Carrera completada con enfoque en desarrollo de aplicaciones web y bases de datos. Proyecto de título: 'Meet & Gig', comunidad digital para músicos independientes. Especialización en desarrollo web y gestión de bases de datos.",
+    technologies: ["JavaScript", "Python", "SQL", "HTML/CSS", "React", "PostgreSQL"],
+    current: false
   },
   {
     id: "2",
-    company: "Estudio Musical",
-    position: "Productor Musical",
-    startDate: "2020-06",
-    endDate: "2023-12",
-    description: "Producción musical para artistas independientes. Grabación, mezcla y masterización de proyectos musicales diversos.",
-    technologies: ["Ableton Live", "Logic Pro", "Pro Tools"],
-    current: false
+    company: "School of Rock Vitacura",
+    position: "Profesor de Bajo Eléctrico",
+    startDate: "2023-01",
+    description: "Docente de bajo eléctrico para niveles medio y avanzado, además de piano y guitarra básica. Desarrollo de metodologías de enseñanza musical y acompañamiento en el crecimiento técnico y artístico de los estudiantes.",
+    technologies: ["Bajo Eléctrico", "Piano", "Guitarra", "Pedagogía Musical"],
+    current: true
+  },
+  {
+    id: "3",
+    company: "Fonko Rocks / Hard Rock Café Santiago",
+    position: "Bajista Profesional",
+    startDate: "2024-01",
+    description: "Bajista en una de las house bands de Hard Rock Café Santiago. Presentaciones en vivo para eventos corporativos y particulares. Colaboración con diversos artistas y adaptación a múltiples géneros musicales.",
+    technologies: ["Bajo Eléctrico", "Performance en Vivo", "Adaptabilidad Musical"],
+    current: true
   }
 ];
 
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-commerce Platform",
-    description: "Plataforma de comercio electrónico desarrollada con Next.js y Stripe para pagos. Incluye panel de administración y gestión de inventario.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "MongoDB", "Tailwind CSS"],
-    imageUrl: "/projects/ecommerce.svg",
-    liveUrl: "https://mi-ecommerce.vercel.app",
-    githubUrl: "https://github.com/usuario/ecommerce",
+    title: "Meet & Gig",
+    description: "Proyecto de título: Comunidad digital para músicos independientes. Plataforma web que conecta músicos, permite la creación de perfiles artísticos, búsqueda de colaboradores y gestión de eventos musicales. Desarrollado con enfoque en experiencia de usuario y gestión eficiente de bases de datos.",
+    technologies: ["JavaScript", "React", "Python", "PostgreSQL", "HTML/CSS"],
+    imageUrl: "/projects/meet-and-gig.svg",
+    githubUrl: "https://github.com/pipejarad/meet-and-gig",
     featured: true
   },
   {
     id: "2",
-    title: "Task Management App",
-    description: "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones push.",
-    technologies: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    imageUrl: "/projects/taskmanager.svg",
-    githubUrl: "https://github.com/usuario/task-manager",
+    title: "Portfolio Profesional",
+    description: "Desarrollo de portfolio personal responsivo usando Next.js 14 y TypeScript. Incluye sección de desarrollo, experiencia musical, formulario de contacto y optimizaciones SEO. Proyecto que demuestra habilidades full-stack y diseño moderno.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    imageUrl: "/projects/portfolio.svg",
+    liveUrl: "https://felipe-jara-portfolio.vercel.app",
+    githubUrl: "https://github.com/pipejarad/portafolio-profesional",
     featured: true
   },
   {
     id: "3",
-    title: "Weather App",
-    description: "Aplicación del clima con geolocalización, pronósticos detallados y diseño responsive.",
-    technologies: ["React", "OpenWeather API", "CSS Modules"],
-    imageUrl: "/projects/weather.svg",
-    liveUrl: "https://weather-app-demo.vercel.app",
-    githubUrl: "https://github.com/usuario/weather-app",
+    title: "Proyectos Académicos",
+    description: "Colección de proyectos desarrollados durante la carrera universitaria, incluyendo aplicaciones web, sistemas de bases de datos y ejercicios de programación en JavaScript, Python y Java.",
+    technologies: ["JavaScript", "Python", "Java", "SQL", "HTML/CSS"],
+    imageUrl: "/projects/academic.svg",
+    githubUrl: "https://github.com/pipejarad",
     featured: false
   }
 ];

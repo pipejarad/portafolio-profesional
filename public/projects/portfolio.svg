@@ -1,0 +1,34 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="url(#gradient2)"/>
+  
+  <!-- Portfolio layout representation -->
+  <rect x="50" y="50" width="300" height="200" rx="15" fill="white" opacity="0.9"/>
+  
+  <!-- Header section -->
+  <rect x="70" y="70" width="260" height="30" rx="5" fill="#1e40af" opacity="0.8"/>
+  <text x="200" y="88" text-anchor="middle" fill="white" font-size="12" font-weight="600">FELIPE JARA</text>
+  
+  <!-- Content blocks -->
+  <rect x="70" y="110" width="120" height="60" rx="8" fill="#3b82f6" opacity="0.6"/>
+  <rect x="210" y="110" width="120" height="60" rx="8" fill="#60a5fa" opacity="0.6"/>
+  <rect x="70" y="180" width="260" height="30" rx="5" fill="#93c5fd" opacity="0.6"/>
+  
+  <!-- Code symbols -->
+  <text x="130" y="140" text-anchor="middle" fill="white" font-size="14" font-weight="600">&lt;/&gt;</text>
+  <text x="270" y="140" text-anchor="middle" fill="white" font-size="14" font-weight="600">♪</text>
+  
+  <text x="200" y="270" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="600">
+    Portfolio Profesional
+  </text>
+  <text x="200" y="285" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" opacity="0.9">
+    Next.js + TypeScript
+  </text>
+  
+  <defs>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="50%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+</svg>

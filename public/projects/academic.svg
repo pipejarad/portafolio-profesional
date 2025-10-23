@@ -1,0 +1,43 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="url(#gradient3)"/>
+  
+  <!-- Academic/university representation -->
+  <rect x="100" y="80" width="200" height="140" rx="10" fill="white" opacity="0.8"/>
+  
+  <!-- Books stack -->
+  <rect x="120" y="100" width="60" height="8" rx="4" fill="#059669"/>
+  <rect x="120" y="110" width="60" height="8" rx="4" fill="#10b981"/>
+  <rect x="120" y="120" width="60" height="8" rx="4" fill="#34d399"/>
+  
+  <!-- Code/academic symbols -->
+  <circle cx="240" cy="130" r="25" fill="#0d9488" opacity="0.7"/>
+  <text x="240" y="138" text-anchor="middle" fill="white" font-size="18" font-weight="600">DB</text>
+  
+  <rect x="120" y="150" width="40" height="30" rx="5" fill="#6366f1" opacity="0.6"/>
+  <text x="140" y="168" text-anchor="middle" fill="white" font-size="10" font-weight="600">JS</text>
+  
+  <rect x="170" y="150" width="40" height="30" rx="5" fill="#8b5cf6" opacity="0.6"/>
+  <text x="190" y="168" text-anchor="middle" fill="white" font-size="10" font-weight="600">PY</text>
+  
+  <rect x="220" y="150" width="40" height="30" rx="5" fill="#ef4444" opacity="0.6"/>
+  <text x="240" y="168" text-anchor="middle" fill="white" font-size="10" font-weight="600">☕</text>
+  
+  <!-- University cap -->
+  <path d="M200 90 L180 95 L200 100 L220 95 Z" fill="#1f2937"/>
+  <rect x="198" y="85" width="4" height="15" fill="#1f2937"/>
+  
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="600">
+    Proyectos Académicos
+  </text>
+  <text x="200" y="265" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" opacity="0.9">
+    Universidad Andrés Bello
+  </text>
+  
+  <defs>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#065f46"/>
+      <stop offset="50%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+</svg>
