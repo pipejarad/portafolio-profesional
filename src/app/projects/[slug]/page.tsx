@@ -1,13 +1,21 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/data/portfolio";
-import { ArrowLeft, ExternalLink, Github, Calendar, Code2 } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Calendar,
+  Code2,
+  AlertTriangle,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import ChallengeCard from "@/components/blog/ChallengeCard";
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -16,8 +24,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -40,23 +49,51 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <div className="bg-white">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              {project.title}
-            </h1>
+            {/* Logo específico para Meet & Gig reemplaza el título */}
+            {slug === "meet-and-gig" ? (
+              <div className="mb-6">
+                <Image
+                  src="/meet-gig-logo.svg"
+                  alt="Meet & Gig Logo"
+                  width={300}
+                  height={300}
+                  className="mx-auto"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                {project.title}
+              </h1>
+            )}
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               {project.description}
             </p>
           </div>
 
           <div className="mb-8">
-            <div className="relative w-full h-64 bg-gray-100 rounded-lg overflow-hidden">
-              <Image
-                src={project.imageUrl || "/placeholder.svg"}
-                alt={project.title}
-                fill
-                className="object-cover"
-                unoptimized
-              />
+            <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden">
+              {slug === "meet-and-gig" ? (
+                <Image
+                  src="/projects/meet-and-gig-screenshot.png"
+                  alt="Screenshot de Meet & Gig - Página Principal"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto object-contain"
+                  unoptimized
+                />
+              ) : (
+                <div className="relative w-full h-64">
+                  <Image
+                    src={project.imageUrl || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              )}
             </div>
           </div>
 
@@ -108,14 +145,38 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         {project.blogContent ? (
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Historia del Proyecto
-            </h3>
-            <p className="text-lg leading-relaxed text-gray-700">
-              {project.blogContent.summary}
-            </p>
-          </div>
+          <>
+            <div className="bg-white border border-gray-200 rounded-lg p-8 mb-12">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                Historia del Proyecto
+              </h3>
+              <div className="text-lg leading-relaxed text-gray-700 space-y-4">
+                {project.blogContent.summary
+                  .split("\n\n")
+                  .map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+              </div>
+            </div>
+
+            {/* Challenges Section */}
+            {project.blogContent.challenges &&
+              project.blogContent.challenges.length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-8 flex items-center">
+                    <AlertTriangle className="h-6 w-6 mr-2 text-orange-600" />
+                    Desafíos Técnicos
+                  </h3>
+                  <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-stretch">
+                    {project.blogContent.challenges.map((challenge, index) => (
+                      <div key={index} className="min-h-[550px]">
+                        <ChallengeCard challenge={challenge} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+          </>
         ) : (
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8 text-center">
             <Calendar className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
@@ -135,7 +196,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 }
 
 export async function generateMetadata({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return {

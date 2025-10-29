@@ -104,12 +104,12 @@ export const projects: Project[] = [
     title: "Meet & Gig",
     description: "Proyecto de título: Comunidad digital para músicos independientes. Plataforma web que conecta músicos, permite la creación de perfiles artísticos, búsqueda de colaboradores y gestión de eventos musicales. Desarrollado con enfoque en experiencia de usuario y gestión eficiente de bases de datos.",
     technologies: ["Python", "Django", "SQLite", "Bootstrap", "HTML/CSS"],
-    imageUrl: "/projects/meet-and-gig.svg",
+    imageUrl: "/projects/meet-and-gig-screenshot.png",
     githubUrl: "https://github.com/pipejarad/meet-and-gig",
     featured: true,
     slug: "meet-and-gig",
     blogContent: {
-      summary: "Meet & Gig nació de mi experiencia personal como músico. Después de años tocando en diferentes bandas y proyectos, me di cuenta de lo difícil que es encontrar músicos compatibles para colaboraciones. Este proyecto de título combina mi pasión por la música con mis conocimientos en desarrollo de software para crear una solución real a un problema que conozco de primera mano.",
+      summary: "Meet & Gig surge de una necesidad observada durante mi experiencia como músico profesional: la dificultad para conectar con otros artistas y encontrar oportunidades laborales de forma centralizada. A partir de esa problemática, decidí desarrollar una plataforma web que funcionara como comunidad digital para músicos independientes, combinando mi formación en ingeniería en computación con mi experiencia en la industria musical.\n\nEl proyecto evolucionó como parte de mi trabajo de título universitario, enfocándose en la creación de perfiles artísticos, portafolios públicos y la gestión de ofertas laborales musicales, aplicando principios de desarrollo ágil, arquitectura por capas y buenas prácticas en experiencia de usuario y manejo de datos.",
       learningJourney: [
         {
           id: "concept",
@@ -163,34 +163,32 @@ export const projects: Project[] = [
       challenges: [
         {
           id: "user-auth",
-          problem: "Implementar un sistema de autenticación robusto que manejara tanto usuarios regulares como perfiles musicales con información específica.",
-          solution: "Utilicé Django's built-in authentication extendido con un modelo Profile personalizado. Implementé signals para crear automáticamente un perfil musical cada vez que se registra un usuario nuevo.",
+          problem: "El sistema debía permitir el registro y autenticación tanto de músicos como de empleadores, manteniendo la seguridad y una estructura flexible para futuras ampliaciones del modelo de datos.",
+          solution: "Implementé el sistema de autenticación nativo de Django, extendido con un modelo Profile personalizado para cada usuario. Utilicé señales (signals) para generar automáticamente un perfil asociado al momento del registro, optimizando la gestión de datos y evitando errores de integridad.",
           learnings: [
-            "Los signals de Django son perfectos para automatizar la creación de objetos relacionados",
-            "Separar User de Profile permite flexibilidad futura sin romper la autenticación",
-            "La validación de campos únicos (como usernames musicales) requiere lógica tanto en modelo como en formulario"
+            "La separación entre User y Profile permite escalar el sistema sin modificar la autenticación base.",
+            "Los signals de Django automatizan tareas críticas sin intervención manual.",
+            "Validar campos únicos (como nombres artísticos) desde el modelo y el formulario evita conflictos en la base de datos."
           ]
         },
         {
           id: "search-functionality",
-          problem: "Crear un sistema de búsqueda eficiente que permitiera filtrar músicos por múltiples criterios: instrumento, género, ubicación y disponibilidad.",
-          solution: "Implementé un sistema de filtros combinados usando Django Q objects y un frontend dinámico con JavaScript que actualiza los resultados en tiempo real sin recargar la página.",
+          problem: "Los usuarios necesitaban poder buscar ofertas laborales y perfiles musicales aplicando múltiples filtros (instrumento, género, disponibilidad y ubicación), manteniendo un rendimiento adecuado incluso con consultas complejas.",
+          solution: "Diseñé un sistema de búsqueda dinámico basado en Q objects de Django y consultas asincrónicas con JavaScript, permitiendo actualizar resultados sin recargar la página. También optimicé las consultas mediante indexación en la base de datos SQLite.",
           learnings: [
-            "Los Q objects de Django permiten consultas complejas de manera elegante",
-            "AJAX mejora dramáticamente la experiencia de usuario en búsquedas",
-            "La indexación de base de datos es crucial para consultas rápidas",
-            "El debouncing en búsquedas previene requests excesivos al servidor"
+            "Los Q objects simplifican la creación de filtros avanzados de forma limpia y legible.",
+            "El uso de AJAX mejora notablemente la experiencia de usuario en búsquedas interactivas.",
+            "La indexación y el debouncing previenen sobrecargas y mantienen una experiencia fluida."
           ]
         },
         {
-          id: "event-management",
-          problem: "Diseñar un sistema que permitiera crear, gestionar y coordinar eventos musicales entre múltiples usuarios.",
-          solution: "Desarrollé un modelo de Event con estados (draft, open, confirmed, completed) y un sistema de invitaciones con confirmación. Incluí notifications in-app para mantener a los usuarios informados.",
+          id: "job-management",
+          problem: "Era necesario crear un sistema que permitiera publicar, editar y eliminar ofertas laborales, así como gestionar postulaciones y notificaciones entre usuarios.",
+          solution: "Desarrollé un modelo JobOffer y un flujo de postulaciones que conecta músicos con empleadores mediante relaciones ForeignKey y ManyToMany. Incorporé notificaciones internas y validaciones para evitar duplicidades en postulaciones o cancelaciones.",
           learnings: [
-            "Los state machines simplifican la lógica de flujos complejos",
-            "Las notificaciones son esenciales para el engagement en aplicaciones colaborativas",
-            "La gestión de fechas y zonas horarias requiere consideración especial",
-            "Los permisos granulares (organizer, participant, viewer) mejoran la seguridad"
+            "El diseño de relaciones entre modelos es clave para mantener la integridad de los datos.",
+            "Las notificaciones mejoran la comunicación asincrónica entre usuarios.",
+            "Aplicar estados (draft, open, closed) permite controlar el ciclo de vida de cada oferta."
           ]
         }
       ],

@@ -13,13 +13,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="h-full" hover>
       {/* Project Image */}
-      <div className="relative h-48 bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="relative h-64 bg-gradient-to-br from-blue-50 to-purple-50">
         {project.imageUrl ? (
           <Image
             src={project.imageUrl}
             alt={project.title}
             fill
-            className="object-cover"
+            className="object-contain p-2"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">

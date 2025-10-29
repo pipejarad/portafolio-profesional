@@ -11,38 +11,51 @@ export default function ChallengeCard({
   index,
 }: ChallengeCardProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-      <div className="mb-4">
-        <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">
-          Desafío #{index + 1}
-        </span>
-        <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-start">
-          <AlertTriangle className="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-          Problema
-        </h3>
-        <p className="text-gray-700 mb-4">{challenge.problem}</p>
-      </div>
+    <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full">
+      <div className="p-6 h-full grid grid-rows-[auto_1fr_1fr_1fr] gap-6">
+        {/* Header */}
+        <div className="flex-shrink-0">
+          <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+            Desafío #{index + 1}
+          </span>
+        </div>
 
-      <div className="mb-4">
-        <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-start">
-          <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-          Solución
-        </h4>
-        <p className="text-gray-700 mb-4">{challenge.solution}</p>
-      </div>
+        {/* Problema */}
+        <div className="flex flex-col">
+          <h3 className="text-base font-semibold text-gray-900 mb-3 flex items-center">
+            <AlertTriangle className="h-4 w-4 text-red-500 mr-2 flex-shrink-0" />
+            Problema
+          </h3>
+          <p className="text-sm text-gray-700 leading-relaxed flex-grow">
+            {challenge.problem}
+          </p>
+        </div>
 
-      <div>
-        <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-start">
-          <Lightbulb className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-          Aprendizajes
-        </h4>
-        <ul className="list-disc list-inside space-y-2">
-          {challenge.learnings.map((learning, idx) => (
-            <li key={idx} className="text-gray-700">
-              {learning}
-            </li>
-          ))}
-        </ul>
+        {/* Solución */}
+        <div className="flex flex-col">
+          <h4 className="text-base font-semibold text-gray-900 mb-3 flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+            Solución
+          </h4>
+          <p className="text-sm text-gray-700 leading-relaxed flex-grow">
+            {challenge.solution}
+          </p>
+        </div>
+
+        {/* Aprendizajes */}
+        <div className="flex flex-col">
+          <h4 className="text-base font-semibold text-gray-900 mb-3 flex items-center">
+            <Lightbulb className="h-4 w-4 text-yellow-500 mr-2 flex-shrink-0" />
+            Aprendizajes
+          </h4>
+          <ul className="list-disc list-inside space-y-2 flex-grow">
+            {challenge.learnings.map((learning, idx) => (
+              <li key={idx} className="text-sm text-gray-700 leading-relaxed">
+                {learning}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
