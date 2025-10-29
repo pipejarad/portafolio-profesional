@@ -14,7 +14,7 @@ export const contactInfo: ContactInfo = {
   linkedin: "https://linkedin.com/in/felipe-jara-6582a3100/",
   github: "https://github.com/pipejarad",
   spotify: "https://open.spotify.com/playlist/0yuZpwdIGC50LnUwXF5UpE?si=dd1d85bba7f241a0",
-  youtube: "https://youtube.com/@tu-canal"
+  instagram: "https://instagram.com/pipejarad"
 };
 
 export const skills: Skill[] = [
@@ -50,7 +50,7 @@ export const skills: Skill[] = [
   { name: "Batería", level: "Beginner", category: "Instrumentos" },
   
   // Music
-  { name: "Cubase", level: "Advanced", category: "Music" },
+  { name: "Cubase", level: "Expert", category: "Music" },
   { name: "Pro Tools", level: "Intermediate", category: "Music" },
   { name: "Mixing & Mastering", level: "Intermediate", category: "Music" },
   { name: "Composición", level: "Advanced", category: "Music" },
@@ -74,26 +74,26 @@ export const experience: Experience[] = [
     position: "Ingeniero en Computación e Informática",
     startDate: "2023-03",
     endDate: "2025-09",
-    description: "Carrera terminada con enfoque en desarrollo de aplicaciones web y bases de datos. Proyecto de título: 'Meet & Gig', comunidad digital para músicos independientes. Especialización en desarrollo web y gestión de bases de datos.",
+    description: "Título universitario con enfoque en desarrollo de aplicaciones web y bases de datos. Desarrollo de proyectos personales incluyendo 'Meet & Gig' como proyecto de título. Actualmente en búsqueda activa de oportunidades laborales en el área de desarrollo de software, con especialización en tecnologías web modernas.",
     technologies: ["JavaScript", "Python", "SQL", "HTML/CSS", "React", "PostgreSQL"],
     current: false
   },
   {
     id: "2",
-    company: "School of Rock Vitacura",
+    company: "School of Rock Vitacura / Saint George's College",
     position: "Profesor de Bajo Eléctrico",
-    startDate: "2023-01",
-    description: "Docente de bajo eléctrico para niveles medio y avanzado, además de piano y guitarra básica. Desarrollo de metodologías de enseñanza musical y acompañamiento en el crecimiento técnico y artístico de los estudiantes.",
-    technologies: ["Bajo Eléctrico", "Piano", "Guitarra", "Pedagogía Musical"],
+    startDate: "2024-01",
+    description: "Docente de bajo eléctrico para niveles básico, medio y avanzado en School of Rock Vitacura. También profesor de talleres co-curriculares de bajo eléctrico y guitarra eléctrica en Saint George's College, desarrollando programas educativos musicales para estudiantes de enseñanza básica y media.",
+    technologies: ["Bajo Eléctrico", "Pedagogía Musical", "Talleres musicales"],
     current: true
   },
   {
     id: "3",
     company: "Fonko Rocks / Hard Rock Café Santiago",
-    position: "Bajista Profesional",
-    startDate: "2024-01",
-    description: "Bajista en una de las house bands de Hard Rock Café Santiago. Presentaciones en vivo para eventos corporativos y particulares. Colaboración con diversos artistas y adaptación a múltiples géneros musicales.",
-    technologies: ["Bajo Eléctrico", "Performance en Vivo", "Adaptabilidad Musical"],
+    position: "Bajista Profesional / Músico de Sesión",
+    startDate: "2021-01",
+    description: "Bajista en una de las house bands de Hard Rock Café Santiago. Presentaciones en vivo para eventos corporativos y particulares. Músico de sesión especializado en grabaciones y colaboraciones con diversos artistas, adaptándome a múltiples géneros musicales y proyectos de estudio.",
+    technologies: ["Bajo Eléctrico", "Shows en Vivo", "Grabación en Estudio", "Adaptabilidad Musical", "Sesiones Profesionales"],
     current: true
   }
 ];
@@ -103,10 +103,11 @@ export const projects: Project[] = [
     id: "1",
     title: "Meet & Gig",
     description: "Proyecto de título: Comunidad digital para músicos independientes. Plataforma web que conecta músicos, permite la creación de perfiles artísticos, búsqueda de colaboradores y gestión de eventos musicales. Desarrollado con enfoque en experiencia de usuario y gestión eficiente de bases de datos.",
-    technologies: ["JavaScript", "React", "Python", "PostgreSQL", "HTML/CSS"],
+    technologies: ["Python", "Django", "SQLite", "Bootstrap", "HTML/CSS"],
     imageUrl: "/projects/meet-and-gig.svg",
     githubUrl: "https://github.com/pipejarad/meet-and-gig",
-    featured: true
+    featured: true,
+    slug: "meet-and-gig"
   },
   {
     id: "2",
@@ -116,52 +117,54 @@ export const projects: Project[] = [
     imageUrl: "/projects/portfolio.svg",
     liveUrl: "https://felipe-jara-portfolio.vercel.app",
     githubUrl: "https://github.com/pipejarad/portafolio-profesional",
-    featured: true
+    featured: true,
+    slug: "portfolio-profesional"
   },
   {
     id: "3",
-    title: "Proyectos Académicos",
-    description: "Colección de proyectos desarrollados durante la carrera universitaria, incluyendo aplicaciones web, sistemas de bases de datos y ejercicios de programación en JavaScript, Python y Java.",
-    technologies: ["JavaScript", "Python", "Java", "SQL", "HTML/CSS"],
-    imageUrl: "/projects/academic.svg",
-    githubUrl: "https://github.com/pipejarad",
-    featured: false
+    title: "Ruby Learning Challenges",
+    description: "Colección de 10 mini-challenges en Ruby que demuestran el dominio progresivo del lenguaje. Desde conceptos básicos como control de flujo hasta temas avanzados como metaprogramming y testing. Cada challenge está documentado con el proceso de aprendizaje y las técnicas implementadas.",
+    technologies: ["Ruby", "Minitest", "JSON", "CSV", "Net::HTTP"],
+    imageUrl: "/projects/ruby-challenges.svg",
+    githubUrl: "https://github.com/pipejarad/ruby-learning-challenges",
+    featured: true,
+    slug: "ruby-learning-challenges"
   }
 ];
 
 export const musicStory: MusicStory = {
   title: "Mi Lado Musical",
-  heroImage: "/music/hero-bass.jpg",
+  heroImage: "/images/felipe-bass.jpg",
   story: [
     "Comencé a tocar bajo eléctrico a los 15 años, y desde entonces he desarrollado una carrera profesional que me ha permitido trabajar con distintos artistas y proyectos en vivo y de estudio. A lo largo del tiempo, he participado en estilos muy diversos —rock, funk, jazz, soul, blues, reggae, gospel, reggaetón, cumbia, salsa, merengue, entre otros— lo que me ha dado una visión amplia y flexible del trabajo musical.",
-    "He colaborado como bajista y director musical con artistas como Luis Pedraza, Vesta Lugg, Daniela Castillo, Byron Fire, Simoney y Diego Ponce, entre otros. Actualmente trabajo con la productora Fonko Rocks, una de las house bands de Hard Rock Café Santiago, y participo en presentaciones y eventos para empresas y particulares.",
-    "Además, ejerzo como profesor en School of Rock Vitacura, donde imparto clases de bajo eléctrico (nivel medio y avanzado), así como piano y guitarra básica. La música me ha enseñado a trabajar en equipo, adaptarme a contextos cambiantes y mantener la calma frente a escenarios exigentes. Son habilidades que también aplico en mi desarrollo profesional dentro del área tecnológica."
+    "He colaborado como bajista y director musical con artistas como Luis Pedraza, Vesta Lugg, Daniela Castillo, Byron Fire y Simoney, entre otros. Actualmente soy parte de la banda/productora Fonko Rocks, una de las house bands de Hard Rock Café Santiago, y participo en presentaciones y eventos para empresas y particulares.",
+    "Además, ejerzo como profesor en School of Rock Vitacura, donde imparto clases de bajo eléctrico (nivel básico, medio y avanzado). La música me ha enseñado a trabajar en equipo, adaptarme a contextos cambiantes y mantener la calma frente a escenarios exigentes. Son habilidades que también aplico en mi desarrollo profesional dentro del área tecnológica."
   ],
   spotifyPlaylist: "https://open.spotify.com/playlist/0yuZpwdIGC50LnUwXF5UpE?si=dd1d85bba7f241a0",
   photos: [
     {
       id: "1",
-      url: "/music/photos/felipe-bass-1.jpg",
-      alt: "Felipe tocando bajo en presentación en vivo",
-      caption: "Presentación en Hard Rock Café Santiago"
+      url: "/images/felipe-bass-1.jpg",
+      alt: "Felipe Jara tocando bajo en matrimonio",
+      caption: "Matrimonio - Show en vivo"
     },
     {
       id: "2", 
-      url: "/music/photos/felipe-bass-2.jpg",
-      alt: "Felipe en estudio de grabación",
-      caption: "Sesión de grabación con Fonko Rocks"
+      url: "/images/felipe-bass-2.jpg",
+      alt: "Felipe en Hard Rock Café",
+      caption: "Hard Rock Café con Fonko Rocks"
     },
     {
       id: "3",
-      url: "/music/photos/felipe-bass-3.jpg", 
+      url: "/images/felipe-bass-3.jpg",
       alt: "Felipe enseñando en School of Rock",
-      caption: "Clase de bajo en School of Rock Vitacura"
+      caption: "Show en Boulevard Parque Arauco"
     },
     {
       id: "4",
-      url: "/music/photos/felipe-bass-4.jpg",
+      url: "/images/felipe-bass-4.jpg",
       alt: "Felipe con su bajo en concierto",
-      caption: "Concierto con artistas locales"
+      caption: "Evento de empresa"
     }
   ],
   philosophy: "Mi experiencia musical me ayudó a entender que las habilidades se construyen con tiempo, práctica y constancia. No partí con un talento natural, pero con disciplina y método logré profesionalizarme en un área que inicialmente me resultaba ajena. Esa misma lógica es la que aplico hoy en el desarrollo de software: aprender a fondo, mejorar cada día y mantener la atención en los detalles que hacen que un trabajo esté bien hecho."

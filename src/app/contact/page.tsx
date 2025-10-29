@@ -2,7 +2,15 @@ import { Metadata } from "next";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Card, CardContent } from "@/components/ui/Card";
 import { contactInfo } from "@/data/portfolio";
-import { Mail, MapPin, Linkedin, Github, Music, Calendar } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Linkedin,
+  Github,
+  Music,
+  Calendar,
+  Instagram,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contacto | Portafolio",
@@ -64,7 +72,7 @@ export default function ContactPage() {
                             href={`mailto:${contactInfo.email}`}
                             className="text-blue-600 hover:text-blue-700"
                           >
-                            {contactInfo.email}
+                            Enviar email
                           </a>
                         </div>
                       </div>
@@ -124,15 +132,15 @@ export default function ContactPage() {
                         </a>
                       )}
 
-                      {contactInfo.youtube && (
+                      {contactInfo.instagram && (
                         <a
-                          href={contactInfo.youtube}
+                          href={contactInfo.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                         >
-                          <div className="w-5 h-5 text-red-600">▶️</div>
-                          <span className="font-medium">YouTube</span>
+                          <Instagram className="w-5 h-5 text-pink-600" />
+                          <span className="font-medium">Instagram</span>
                         </a>
                       )}
                     </div>
@@ -166,53 +174,6 @@ export default function ContactPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">
-              Preguntas Frecuentes
-            </h2>
-
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Cuánto tiempo toma un proyecto típico?
-                </h3>
-                <p className="text-gray-600">
-                  Depende de la complejidad, pero la mayoría de proyectos web
-                  toman entre 2-6 semanas. Los proyectos musicales pueden variar
-                  desde una semana para un single hasta varios meses para un
-                  álbum.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Trabajas con clientes internacionales?
-                </h3>
-                <p className="text-gray-600">
-                  ¡Absolutamente! Trabajo con clientes de todo el mundo. Tengo
-                  experiencia coordinando proyectos en diferentes zonas horarias
-                  y me adapto a las necesidades de comunicación de cada cliente.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Ofreces soporte post-proyecto?
-                </h3>
-                <p className="text-gray-600">
-                  Sí, incluyo un período de soporte gratuito después de entregar
-                  cada proyecto. También ofrezco planes de mantenimiento y
-                  soporte extendido según las necesidades.
-                </p>
               </div>
             </div>
           </div>

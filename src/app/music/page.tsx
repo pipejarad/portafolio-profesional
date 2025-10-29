@@ -1,12 +1,13 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import { musicStory } from '@/data/portfolio';
-import { PhotoGallery } from '@/components/ui/photo-gallery';
-import { SpotifyPlaylist } from '@/components/ui/spotify-playlist';
+import { Metadata } from "next";
+import Image from "next/image";
+import { musicStory } from "@/data/portfolio";
+import { PhotoGallery } from "@/components/ui/photo-gallery";
+import { SpotifyPlaylist } from "@/components/ui/spotify-playlist";
 
 export const metadata: Metadata = {
-  title: 'Mi Lado Musical - Felipe Jara',
-  description: 'La experiencia musical de Felipe Jara como bajista profesional, colaboraciones con artistas y la conexión entre música y desarrollo de software.',
+  title: "Mi Lado Musical - Felipe Jara",
+  description:
+    "La experiencia musical de Felipe Jara como bajista profesional, colaboraciones con artistas y la conexión entre música y desarrollo de software.",
 };
 
 export default function MusicPage() {
@@ -35,7 +36,7 @@ export default function MusicPage() {
       </section>
 
       <div className="container mx-auto px-4 py-16">
-        {/* Historia Musical */}
+        {/* 1. Historia Musical */}
         <section className="mb-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -43,7 +44,10 @@ export default function MusicPage() {
             </h2>
             <div className="prose prose-lg max-w-none">
               {musicStory.story.map((paragraph, index) => (
-                <p key={index} className="text-gray-700 leading-relaxed mb-6 text-lg">
+                <p
+                  key={index}
+                  className="text-gray-700 leading-relaxed mb-6 text-lg"
+                >
                   {paragraph}
                 </p>
               ))}
@@ -51,25 +55,8 @@ export default function MusicPage() {
           </div>
         </section>
 
-        {/* Galería de Fotos */}
+        {/* 2. Conexión Música-Desarrollo */}
         <section className="mb-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              📸 En Acción
-            </h2>
-            <PhotoGallery photos={musicStory.photos} />
-          </div>
-        </section>
-
-        {/* Spotify Playlist */}
-        <section className="mb-16">
-          <div className="max-w-2xl mx-auto">
-            <SpotifyPlaylist playlistUrl={musicStory.spotifyPlaylist} />
-          </div>
-        </section>
-
-        {/* Conexión Música-Desarrollo */}
-        <section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
               💻 Música y Desarrollo
@@ -79,6 +66,23 @@ export default function MusicPage() {
                 {musicStory.philosophy}
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* 3. Galería de Fotos */}
+        <section className="mb-16">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              📸 Galería de fotos
+            </h2>
+            <PhotoGallery photos={musicStory.photos} />
+          </div>
+        </section>
+
+        {/* 4. Spotify Playlist */}
+        <section>
+          <div className="max-w-2xl mx-auto">
+            <SpotifyPlaylist playlistUrl={musicStory.spotifyPlaylist} />
           </div>
         </section>
       </div>

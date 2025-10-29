@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { SkillBar } from "@/components/ui/SkillBar";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
@@ -41,13 +42,14 @@ export default function AboutPage() {
               {/* Profile Image */}
               <div className="lg:col-span-1">
                 <div className="relative w-80 h-80 mx-auto lg:w-full lg:h-full max-w-sm">
-                  <div className="w-full h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                    <div className="text-6xl">👨‍💻</div>
-                  </div>
-                  {/* Placeholder para imagen real */}
-                  <div className="absolute inset-0 bg-black bg-opacity-10 rounded-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <p className="text-white text-sm">Agregar foto personal</p>
-                  </div>
+                  <Image
+                    src="/images/felipe-profile.jpg"
+                    alt="Felipe Jara - Desarrollador Full Stack y Músico"
+                    width={320}
+                    height={320}
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                    priority
+                  />
                 </div>
               </div>
 

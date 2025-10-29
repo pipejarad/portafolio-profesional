@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Music } from "lucide-react";
+import { Github, Linkedin, Mail, Music, Instagram } from "lucide-react";
+import { contactInfo } from "@/data/portfolio";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,11 +11,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Portafolio</h3>
+            <h3 className="text-lg font-semibold mb-4">Felipe Jara</h3>
             <p className="text-gray-400 text-sm">
-              Desarrollador Full Stack & Músico
-              <br />
-              Creando experiencias digitales y sonoras
+              Desarrollador Full Stack & Músico profesional
             </p>
           </div>
 
@@ -62,7 +61,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Sígueme</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -71,7 +70,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -80,14 +79,23 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:tu.email@example.com"
+                href={contactInfo.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="https://spotify.com"
+                href={contactInfo.spotify}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -101,7 +109,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-800">
           <p className="text-center text-sm text-gray-400">
-            © {currentYear} Portafolio. Todos los derechos reservados.
+            © {currentYear} Felipe Jara. Todos los derechos reservados.
           </p>
         </div>
       </div>

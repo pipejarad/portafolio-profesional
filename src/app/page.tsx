@@ -24,9 +24,20 @@ export default function Home() {
                     unoptimized
                   />
                 </div>
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
-                  Acerca de mi
+
+                {/* Firma en el medio */}
+                <div className="w-64 h-24 sm:w-80 sm:h-32 lg:w-96 lg:h-40">
+                  <Image
+                    src="/images/signature-original.svg?v=4"
+                    alt="Felipe Jara Signature"
+                    width={384}
+                    height={160}
+                    className="w-full h-full object-contain"
+                    priority
+                    unoptimized
+                  />
                 </div>
+
                 <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48">
                   <Image
                     src="/images/logo-fj-original.svg"

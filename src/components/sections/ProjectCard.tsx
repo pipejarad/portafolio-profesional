@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
-import { ExternalLink, Github, Star } from "lucide-react";
+import { ExternalLink, Github, Star, BookOpen } from "lucide-react";
 import { Project } from "@/lib/types";
 
 interface ProjectCardProps {
@@ -60,7 +60,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-2">
+          {/* Blog Link */}
+          {project.slug && (
+            <Link
+              href={`/projects/${project.slug}`}
+              className="flex items-center gap-2 px-3 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              <BookOpen className="w-4 h-4" />
+              Leer Blog
+            </Link>
+          )}
+
           {project.liveUrl && (
             <Link
               href={project.liveUrl}

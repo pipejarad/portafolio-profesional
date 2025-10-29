@@ -8,6 +8,50 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
+  // Blog fields
+  slug?: string;
+  blogContent?: ProjectBlogContent;
+}
+
+export interface ProjectBlogContent {
+  summary: string;
+  learningJourney: LearningStep[];
+  challenges: Challenge[];
+  highlights: string[];
+  techStackDetails: TechStackDetail[];
+  gallery: ProjectImage[];
+  nextSteps?: string[];
+  developmentStatus: 'completed' | 'in-progress' | 'planning';
+}
+
+export interface LearningStep {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  insights: string[];
+}
+
+export interface Challenge {
+  id: string;
+  problem: string;
+  solution: string;
+  learnings: string[];
+}
+
+export interface TechStackDetail {
+  technology: string;
+  purpose: string;
+  experience: 'new' | 'familiar' | 'expert';
+  keyFeatures: string[];
+}
+
+export interface ProjectImage {
+  id: string;
+  url: string;
+  alt: string;
+  caption: string;
+  type: 'screenshot' | 'gif' | 'diagram';
 }
 
 export interface MusicStory {
@@ -50,7 +94,7 @@ export interface ContactInfo {
   linkedin?: string;
   github?: string;
   spotify?: string;
-  youtube?: string;
+  instagram?: string;
 }
 
 export interface PersonalInfo {
