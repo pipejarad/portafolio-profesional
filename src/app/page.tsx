@@ -28,7 +28,7 @@ export default function Home() {
                 {/* Firma en el medio */}
                 <div className="w-64 h-24 sm:w-80 sm:h-32 lg:w-96 lg:h-40">
                   <Image
-                    src="/images/signature-original.svg?v=4"
+                    src="/images/signature-original.svg"
                     alt="Felipe Jara Signature"
                     width={384}
                     height={160}

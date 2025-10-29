@@ -107,7 +107,160 @@ export const projects: Project[] = [
     imageUrl: "/projects/meet-and-gig.svg",
     githubUrl: "https://github.com/pipejarad/meet-and-gig",
     featured: true,
-    slug: "meet-and-gig"
+    slug: "meet-and-gig",
+    blogContent: {
+      summary: "Meet & Gig nació de mi experiencia personal como músico. Después de años tocando en diferentes bandas y proyectos, me di cuenta de lo difícil que es encontrar músicos compatibles para colaboraciones. Este proyecto de título combina mi pasión por la música con mis conocimientos en desarrollo de software para crear una solución real a un problema que conozco de primera mano.",
+      learningJourney: [
+        {
+          id: "concept",
+          title: "Conceptualización del Problema",
+          description: "Identifiqué las principales dificultades que enfrentan los músicos independientes para conectarse y colaborar.",
+          technologies: ["Research", "User Stories", "Problem Analysis"],
+          insights: [
+            "Los músicos necesitan más que una red social tradicional",
+            "La búsqueda por género, instrumento y ubicación es fundamental",
+            "La gestión de eventos y ensayos es un pain point recurrente",
+            "La confianza y reputación son cruciales en colaboraciones musicales"
+          ]
+        },
+        {
+          id: "architecture",
+          title: "Arquitectura y Diseño de Sistema",
+          description: "Definí la arquitectura de la aplicación web, modelos de datos y flujos de usuario principales.",
+          technologies: ["Django", "SQLite", "MVC Pattern", "Database Design"],
+          insights: [
+            "Django ofrece un ORM robusto perfecto para relaciones complejas entre usuarios",
+            "El patrón MVC facilita la separación de responsabilidades",
+            "SQLite es ideal para desarrollo y prototipos rápidos",
+            "Los modelos de Usuario, Perfil Musical y Evento son el core del sistema"
+          ]
+        },
+        {
+          id: "development",
+          title: "Desarrollo Full-Stack",
+          description: "Implementé tanto el backend como el frontend, desde la autenticación hasta la interfaz de usuario.",
+          technologies: ["Python", "Django Templates", "Bootstrap", "JavaScript", "CSS3"],
+          insights: [
+            "Django Class-Based Views aceleran el desarrollo de CRUD operations",
+            "Bootstrap permite crear interfaces responsivas rápidamente",
+            "La validación tanto en frontend como backend es esencial para la integridad de datos",
+            "Los formularios dinámicos mejoran significativamente la experiencia de usuario"
+          ]
+        },
+        {
+          id: "testing",
+          title: "Testing y Validación",
+          description: "Implementé pruebas unitarias y realicé testing con usuarios reales del mundo musical.",
+          technologies: ["Django TestCase", "Unit Testing", "User Testing", "Bug Tracking"],
+          insights: [
+            "Los tests automatizados son fundamentales para mantener la calidad del código",
+            "El feedback de músicos reales reveló casos de uso no considerados inicialmente",
+            "La iteración rápida basada en feedback es clave en el desarrollo de productos",
+            "Los edge cases en aplicaciones sociales son más complejos de lo esperado"
+          ]
+        }
+      ],
+      challenges: [
+        {
+          id: "user-auth",
+          problem: "Implementar un sistema de autenticación robusto que manejara tanto usuarios regulares como perfiles musicales con información específica.",
+          solution: "Utilicé Django's built-in authentication extendido con un modelo Profile personalizado. Implementé signals para crear automáticamente un perfil musical cada vez que se registra un usuario nuevo.",
+          learnings: [
+            "Los signals de Django son perfectos para automatizar la creación de objetos relacionados",
+            "Separar User de Profile permite flexibilidad futura sin romper la autenticación",
+            "La validación de campos únicos (como usernames musicales) requiere lógica tanto en modelo como en formulario"
+          ]
+        },
+        {
+          id: "search-functionality",
+          problem: "Crear un sistema de búsqueda eficiente que permitiera filtrar músicos por múltiples criterios: instrumento, género, ubicación y disponibilidad.",
+          solution: "Implementé un sistema de filtros combinados usando Django Q objects y un frontend dinámico con JavaScript que actualiza los resultados en tiempo real sin recargar la página.",
+          learnings: [
+            "Los Q objects de Django permiten consultas complejas de manera elegante",
+            "AJAX mejora dramáticamente la experiencia de usuario en búsquedas",
+            "La indexación de base de datos es crucial para consultas rápidas",
+            "El debouncing en búsquedas previene requests excesivos al servidor"
+          ]
+        },
+        {
+          id: "event-management",
+          problem: "Diseñar un sistema que permitiera crear, gestionar y coordinar eventos musicales entre múltiples usuarios.",
+          solution: "Desarrollé un modelo de Event con estados (draft, open, confirmed, completed) y un sistema de invitaciones con confirmación. Incluí notifications in-app para mantener a los usuarios informados.",
+          learnings: [
+            "Los state machines simplifican la lógica de flujos complejos",
+            "Las notificaciones son esenciales para el engagement en aplicaciones colaborativas",
+            "La gestión de fechas y zonas horarias requiere consideración especial",
+            "Los permisos granulares (organizer, participant, viewer) mejoran la seguridad"
+          ]
+        }
+      ],
+      highlights: [
+        "Sistema de perfiles musicales completos con portfolios, grabaciones y reseñas",
+        "Búsqueda avanzada con filtros por instrumento, género musical y ubicación geográfica",
+        "Gestión completa de eventos musicales con sistema de invitaciones",
+        "Sistema de reputación basado en colaboraciones anteriores",
+        "Dashboard intuitivo para gestionar conexiones y proyectos activos",
+        "Responsive design que funciona perfectamente en móviles y desktop"
+      ],
+      techStackDetails: [
+        {
+          technology: "Python/Django",
+          purpose: "Framework principal para desarrollo web full-stack",
+          experience: "new",
+          keyFeatures: ["ORM robusto", "Sistema de autenticación integrado", "Admin interface", "Class-based views", "Template engine"]
+        },
+        {
+          technology: "SQLite",
+          purpose: "Base de datos para desarrollo y prototipo",
+          experience: "familiar",
+          keyFeatures: ["Ligera y fácil de configurar", "Perfecta para desarrollo", "Soporte completo de SQL", "Integración nativa con Django"]
+        },
+        {
+          technology: "Bootstrap",
+          purpose: "Framework CSS para diseño responsivo rápido",
+          experience: "familiar",
+          keyFeatures: ["Grid system responsivo", "Componentes pre-diseñados", "Utilities classes", "Cross-browser compatibility"]
+        },
+        {
+          technology: "JavaScript",
+          purpose: "Interactividad del frontend y AJAX calls",
+          experience: "familiar",
+          keyFeatures: ["DOM manipulation", "Event handling", "AJAX requests", "Form validation dinámica"]
+        }
+      ],
+      gallery: [
+        {
+          id: "dashboard",
+          url: "/projects/meet-and-gig/dashboard.png",
+          alt: "Dashboard principal de Meet & Gig",
+          caption: "Vista del dashboard donde los usuarios gestionan sus conexiones y eventos",
+          type: "screenshot"
+        },
+        {
+          id: "search",
+          url: "/projects/meet-and-gig/search.png",
+          alt: "Sistema de búsqueda de músicos",
+          caption: "Búsqueda avanzada con filtros múltiples en tiempo real",
+          type: "screenshot"
+        },
+        {
+          id: "profile",
+          url: "/projects/meet-and-gig/profile.png",
+          alt: "Perfil musical completo",
+          caption: "Ejemplo de perfil musical con portfolio y reseñas",
+          type: "screenshot"
+        }
+      ],
+      nextSteps: [
+        "Integración con plataformas de streaming (Spotify, SoundCloud)",
+        "Sistema de messaging in-app para comunicación directa",
+        "Geolocalización para encontrar músicos cercanos",
+        "Integration con calendarios externos (Google Calendar)",
+        "Sistema de pagos para eventos pagados",
+        "App móvil nativa para iOS y Android"
+      ],
+      developmentStatus: "completed"
+    }
   },
   {
     id: "2",
