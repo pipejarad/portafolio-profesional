@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -23,10 +24,19 @@ export default function Header() {
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
-              Portafolio
+            <Link href="/" className="flex items-center">
+              <div className="h-12">
+                <Image
+                  src="/images/signature-original.svg"
+                  alt="Felipe Jara"
+                  width={180}
+                  height={48}
+                  className="h-full w-auto object-contain"
+                  unoptimized
+                />
+              </div>
             </Link>
           </div>
 
