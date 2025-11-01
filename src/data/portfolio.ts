@@ -266,7 +266,7 @@ export const projects: Project[] = [
     description: "Desarrollo de portfolio personal responsivo usando Next.js 14 y TypeScript. Incluye sección de desarrollo, experiencia musical, formulario de contacto y optimizaciones SEO. Proyecto que demuestra habilidades full-stack y diseño moderno.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     imageUrl: "/projects/portfolio.svg",
-    liveUrl: "https://felipe-jara-portfolio.vercel.app",
+    liveUrl: "https://fj-portafolio.vercel.app",
     githubUrl: "https://github.com/pipejarad/portafolio-profesional",
     featured: true,
     slug: "portfolio-profesional"

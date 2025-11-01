@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <ExternalLink className="h-5 w-5 mr-2" />
-                  Ver Demo
+                  Ver Proyecto
                 </a>
               )}
             </div>

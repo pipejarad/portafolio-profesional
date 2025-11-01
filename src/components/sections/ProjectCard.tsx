@@ -80,7 +80,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
               <ExternalLink className="w-4 h-4" />
-              Ver Demo
+              Ver Proyecto
             </Link>
           )}
           {project.githubUrl && (
