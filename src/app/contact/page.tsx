@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Card, CardContent } from "@/components/ui/Card";
+import { CopyEmailButton } from "@/components/ui/CopyEmailButton";
 import { contactInfo } from "@/data/portfolio";
 import {
   Mail,
@@ -68,12 +69,7 @@ export default function ContactPage() {
                         <Mail className="w-5 h-5 text-blue-600" />
                         <div>
                           <p className="font-medium text-gray-900">Email</p>
-                          <a
-                            href={`mailto:${contactInfo.email}`}
-                            className="text-blue-600 hover:text-blue-700"
-                          >
-                            Enviar email
-                          </a>
+                          <CopyEmailButton email={contactInfo.email} />
                         </div>
                       </div>
 
