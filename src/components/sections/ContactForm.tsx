@@ -29,6 +29,7 @@ export function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -65,13 +66,26 @@ export function ContactForm() {
     }
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simular envío del formulario
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const response = await fetch("https://formspree.io/f/xpqjllky", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-      // Aquí iría la lógica real de envío (API, email service, etc.)
-      console.log("Formulario enviado:", formData);
+      if (!response.ok) {
+        throw new Error("Error al enviar el formulario");
+      }
 
       setIsSubmitted(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -80,13 +94,16 @@ export function ContactForm() {
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
       console.error("Error al enviar formulario:", error);
+      setSubmitError(
+        "Hubo un error al enviar tu mensaje. Por favor intenta de nuevo o escríbeme directamente a mi email.",
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -241,6 +258,14 @@ export function ContactForm() {
               </p>
             )}
           </div>
+
+          {/* Error Message */}
+          {submitError && (
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+              <p className="text-sm text-red-700">{submitError}</p>
+            </div>
+          )}
 
           {/* Submit Button */}
           <button
